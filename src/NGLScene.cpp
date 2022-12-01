@@ -37,7 +37,7 @@ void NGLScene::initializeGL()
   glEnable(GL_DEPTH_TEST);
   // enable multisampling for smoother drawing
   glEnable(GL_MULTISAMPLE);
-  m_emitter = std::make_unique<Emitter>(300'000);
+  m_emitter = std::make_unique<Emitter>(100'000);
   ngl::ShaderLib::use(ngl::nglColourShader);
   m_view = ngl::lookAt({10, 10, 10}, {0, 0, 0}, {0, 1, 0});
   m_project = ngl::perspective(45.0f, 1.0f, 0.01f, 100.0f);
